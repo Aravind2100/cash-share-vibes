@@ -13,7 +13,7 @@ interface ShareModalProps {
 }
 
 const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose, onShareComplete }) => {
-  const shareLink = "https://giveaway-theta-three.vercel.app/";
+  const shareLink = "https://cash-share-vibes.vercel.app/";
   const shareMessage = ` Win ₹100 PayTM Cash Weekly! 
 
 Join me in this giveaway - super easy to enter!
