@@ -9,19 +9,20 @@ import { toast } from '@/hooks/use-toast';
 interface ShareModalProps {
   isOpen: boolean;
   onClose: () => void;
+  onShareComplete?: () => void;
 }
 
-const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose }) => {
+const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose, onShareComplete }) => {
   const shareLink = "https://cashreward.app/ref/user123";
-  const shareMessage = `🎉 Win ₹100 PayTM Cash! 💰
+  const shareMessage = `🎉 Win ₹100 PayTM Cash Weekly! 💰
 
-Join me in this weekly giveaway - super easy to enter!
+Join me in this giveaway - super easy to enter!
 
 Just click this link and sign up:
 ${shareLink}
 
 ✅ Instant PayTM transfer
-✅ No hidden charges
+✅ No hidden charges  
 ✅ Trusted platform
 
 Let's both win! 🚀`;
@@ -33,6 +34,7 @@ Let's both win! 🚀`;
         title: "Link copied!",
         description: "Share link copied to clipboard",
       });
+      if (onShareComplete) onShareComplete();
     } catch (err) {
       console.log('Failed to copy link');
     }
@@ -42,6 +44,7 @@ Let's both win! 🚀`;
     const encodedMessage = encodeURIComponent(shareMessage);
     const whatsappUrl = `https://wa.me/?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
+    if (onShareComplete) onShareComplete();
   };
 
   const shareGeneric = async () => {
@@ -52,6 +55,7 @@ Let's both win! 🚀`;
           text: shareMessage,
           url: shareLink,
         });
+        if (onShareComplete) onShareComplete();
       } catch (err) {
         console.log('Share cancelled');
       }
@@ -66,12 +70,12 @@ Let's both win! 🚀`;
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
             <Users className="w-5 h-5" />
-            Share & Win ₹100
+            Share & Win ₹100 🎉
           </DialogTitle>
         </DialogHeader>
         
         <div className="space-y-4">
-          <Card className="border border-green-200 bg-green-50">
+          <Card className="border border-green-200 bg-gradient-to-r from-green-50 to-emerald-50">
             <CardContent className="p-4">
               <div className="text-sm text-green-800">
                 <div className="font-semibold mb-1">Your Referral Link:</div>
