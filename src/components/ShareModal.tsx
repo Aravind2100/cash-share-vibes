@@ -21,9 +21,9 @@ Join me in this giveaway - super easy to enter!
 Just click this link and sign up:
 ${shareLink}
 
- Instant PayTM transfer
- No hidden charges  
- Trusted platform
+ 1)Instant PayTM transfer
+ 2)No hidden charges  
+ 3)Trusted platform
 
 Let's both win! `;
 
