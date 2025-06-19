@@ -13,19 +13,19 @@ interface ShareModalProps {
 }
 
 const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose, onShareComplete }) => {
-  const shareLink = "https://cashreward.app/ref/user123";
-  const shareMessage = `🎉 Win ₹100 PayTM Cash Weekly! 💰
+  const shareLink = "https://giveaway-theta-three.vercel.app/";
+  const shareMessage = ` Win ₹100 PayTM Cash Weekly! 
 
 Join me in this giveaway - super easy to enter!
 
 Just click this link and sign up:
 ${shareLink}
 
-✅ Instant PayTM transfer
-✅ No hidden charges  
-✅ Trusted platform
+ Instant PayTM transfer
+ No hidden charges  
+ Trusted platform
 
-Let's both win! 🚀`;
+Let's both win! `;
 
   const copyToClipboard = async () => {
     try {
