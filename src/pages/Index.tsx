@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -12,7 +13,7 @@ import SuccessPopup from '@/components/SuccessPopup';
 const Index = () => {
   const [isShareModalOpen, setIsShareModalOpen] = useState(false);
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
-  const [referralCount, setReferralCount] = useState(0.5);
+  const [referralCount, setReferralCount] = useState(0);
   const requiredReferrals = 5;
   const progressPercentage = (referralCount / requiredReferrals) * 100;
   const isEligible = referralCount >= requiredReferrals;
